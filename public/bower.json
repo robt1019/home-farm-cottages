@@ -1,0 +1,22 @@
+{
+  "name": "home_farm_cottages",
+  "description": "",
+  "main": "",
+  "authors": [
+    "robt1019 <robert.i.taylor88@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/robt1019/home-farm-cottages",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.8",
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {}
+}
