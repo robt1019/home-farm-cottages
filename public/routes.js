@@ -8,10 +8,13 @@ angular.module('hfc').config(function($routeProvider, $locationProvider) {
     .when('/contact', {
         template: '<hfc-navbar></hfc-navbar><h1>Contact</h1>'
     })
+    .when('/login', {
+        templateUrl: 'login/login.view.html'
+    })
     .when('/admin', {
-        template: '<h1>admin</h1>'
+        template: '<h1>admin</h1>',
+        controller: 'LoginCtrl'
     });
-
 
     $locationProvider.html5Mode(true);
 });
