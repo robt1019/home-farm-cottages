@@ -3,10 +3,10 @@ angular.module('hfc').config(function($routeProvider, $locationProvider) {
         templateUrl: 'homepage/homepage.view.html'
     })
     .when('/about', {
-        template: '<h1>About</h1>'
+        template: '<hfc-navbar></hfc-navbar><h1>About</h1>'
     })
     .when('/contact', {
-        template: '<h1>Contact</h1>'
+        template: '<hfc-navbar></hfc-navbar><h1>Contact</h1>'
     });
 
     $locationProvider.html5Mode(true);

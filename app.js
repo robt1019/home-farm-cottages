@@ -26,7 +26,7 @@ app.use('/users', users);
 
 // load angular front end application
 app.get('*', function(req, res) {
-    res.sendFile('./public/index.html');
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
 
 // catch 404 and forward to error handler
