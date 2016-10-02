@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build-dev": "npm install && cd public && bower install",
     "start": "NODE_ENV=development nodemon ./bin/www",
     "test": "node_modules/karma/bin/karma start"
   },
