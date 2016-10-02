@@ -18,10 +18,10 @@ module.exports = function(config) {
             'bower_components/angular/angular.js',
             'bower_components/angular-route/angular-route.js',
             'bower_components/angular-mocks/angular-mocks.js',
-            'app.js',
-            'homepage/**/*.js',
-            'navbar/**/*.js',
-            '**/*.html',
+            'public/app.js',
+            'public/homepage/**/*.js',
+            'public/navbar/**/*.js',
+            'public/**/*.html',
             'test/unit/**/*.js'
         ],
 
