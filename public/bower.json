@@ -18,5 +18,7 @@
     "angular-route": "^1.5.8",
     "angular": "^1.5.8"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "angular-mocks": "^1.5.8"
+  }
 }
