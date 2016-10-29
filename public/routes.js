@@ -10,7 +10,7 @@ angular.module('hfc').config(function($routeProvider, $locationProvider) {
     })
     .when('/login', {
         templateUrl: 'login/login.view.html',
-        controller: 'loginCtrl'
+        controller: 'LoginCtrl'
     })
     .when('/admin', {
         templateUrl: 'admin/admin.view.html',

@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var session = require('express-session'); 
 var passport = require('passport');
 
 var routes = require('./routes/index');
@@ -22,7 +23,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// login shtuff
+app.set('trust proxy', 1);
+app.use(session({secret: 'top secret'}));
 app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', routes);
 app.use('/users', users);
