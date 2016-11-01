@@ -29,24 +29,9 @@ passport.use(new LocalStrategy(
 router.post('/login',
     passport.authenticate('local', {
         successRedirect: '/admin',
-        failureRedirect: '/'
+        failureRedirect: '/',
+        session: false
     })
 );
-
-router.get('/admin', function(req, res, next) {
-    if(req.user) {
-        next();
-    } else {
-        res.redirect('/login');
-    }
-});
-
-passport.serializeUser(function(user, done) {
-  done(null, user);
-});
-
-passport.deserializeUser(function(user, done) {
-  done(null, user);
-});
 
 module.exports = router;
