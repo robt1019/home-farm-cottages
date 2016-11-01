@@ -16,7 +16,9 @@ passport.use(new LocalStrategy(
 
         client.query('SELECT * FROM users WHERE username = ($1);', [username], function(err, result) {
 
-            console.log(result);
+            if(!result.rows[0]) {
+                return done(null, false, {message: 'Incorrect username'});
+            }
 
             if (result.rows[0].password !== password) {
                 return done(null, false, { message: 'Incorrect password' });
